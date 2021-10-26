@@ -1,0 +1,13 @@
+---
+plugins: "https://downloads.wordpress.org/plugin/download-now-for-woocommerce.zip"
+theme_function: "/opt/wordpress/wp-content/themes/twentytwentyone/functions.php"
+database:
+  name: "{{ lookup('env', 'database_name') | default('database_name_here' , True) }}"
+  user:  "{{ lookup('env', 'database_user') | default('database_user' , True) }}"
+  password:  "{{ lookup('env', 'database_password') | default('database_password' , True) }}"
+  host:  "{{ lookup('env', 'database_host') | default('database_host' , True) }}"
+user:
+  name: "{{ lookup('env', 'user_name') | default('user_name' , True) }}"
+  password: "{{ lookup('env', 'user_password') | default('user_password' , True) }}"
+  email: "{{ lookup('env', 'user_email') | default('user_emial' , True) }}"
+wp_config: "/srv/local/config/wp-config.php"

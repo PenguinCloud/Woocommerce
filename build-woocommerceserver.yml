@@ -1,0 +1,15 @@
+---
+- name: Install WooCommerce
+  hosts: 127.0.0.1
+  become: yes
+  connection: local
+  vars_files: vars/variables.yml
+  tasks:
+    - name: Install Wordpress Dependencies
+      include_tasks: jobs/install_dependencies.yml
+    - name: Install Wordpress
+      include_tasks: jobs/install_wordpress.yml
+    - name: Install Plugins
+      include_tasks: jobs/install_plugins.yml
+    - name: Configure NGINX
+      include_tasks: jobs/nginx.yml
