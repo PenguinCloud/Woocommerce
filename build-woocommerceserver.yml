@@ -18,7 +18,7 @@
       include_tasks: jobs/config/config_wp.yml
 
     - name: Configure NGINX
-      include_tasks: jobs/config/nginx.yml
+      include_tasks: jobs/config/config_nginx.yml
 
 
 
