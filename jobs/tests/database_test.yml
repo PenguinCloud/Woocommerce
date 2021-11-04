@@ -1,0 +1,8 @@
+---
+- name: Check database connectivity
+  command: echo X | telnet -e X "{{ database.host }}" 3306
+  register: database_connect
+
+- name: Assert that database is connected
+  assert:
+    that: "'Connected' in database_connect.stdout"

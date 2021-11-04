@@ -1,0 +1,8 @@
+---
+- name: Check log file errors
+  command: cat error.log | grep -w "ERROR"
+  register: errors_log
+
+- name: Assert that log file can detect errors
+  assert:
+    that: "'ERROR' in errors_log.stdout"

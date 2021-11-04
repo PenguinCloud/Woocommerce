@@ -1,0 +1,24 @@
+---
+- name: "Check if NGINX is installed"
+  package_facts:
+    manager: "auto"
+
+- name: confirm nginx is installed
+  assert:
+    that: "'nginx' in ansible_facts.packages"
+
+- name: Check if nginx is running
+  command: ps aux | grep nginx
+  register: nginx_status
+
+  name: Assert that nginx is running
+  assert:
+    that: "'nginx: worker process' in nginx_status.std_lines"
+
+- name: Check if port 80 is listening
+  command: netstat -tulpn | grep :80
+  register: port_check
+
+- name: confirm port 80 is listening
+  assert:
+    that: "' 0 :::80                   :::*                    LISTEN' in port_check.stdout"
