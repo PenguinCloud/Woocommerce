@@ -4,7 +4,6 @@
     pkg:
     - nginx
     - php
-    - php-fpm
     - php-mysql
     - php-curl
     - php-gd
@@ -14,8 +13,10 @@
     - php-xml
     - php-xmlrpc
     - php-zip
-
+    state: latest
+    autoclean: yes
     update_cache: yes
+
 
 
 
