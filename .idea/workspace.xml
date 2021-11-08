@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="Restructured project and wrote tests" />
+    <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="Renamed file">
+      <change afterPath="$PROJECT_DIR$/jobs/tests/wordpress_test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-woocommerceserver.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/config/config_nginx.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/config/config_nginx.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/tests/database_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/tests/database_test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/tests/logfile_check.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/tests/nginx_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/tests/nginx_test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/wordpress.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vars/variables.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vars/variables.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +48,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -83,7 +96,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636032269450</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Restructured project and wrote tests">
+      <created>1636032558550</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1636032558550</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Renamed file">
+      <created>1636032806500</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636032806500</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,9 +138,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Push Woocommerce code" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Restructured project and wrote tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restructured project and wrote tests" />
+    <MESSAGE value="Renamed file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed file" />
   </component>
 </project>

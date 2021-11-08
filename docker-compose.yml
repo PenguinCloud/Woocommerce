@@ -12,3 +12,9 @@ services:
       - /var/log/nginx
       - /opt
     restart: always
+    healthcheck:
+      test: ["CMD", "ansible-playbook", "upstart.yml", "--tag", "tests"]
+      interval: 5m
+      timeout: 10s
+      retries: 3
+      start_period: 10s

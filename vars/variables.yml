@@ -6,8 +6,10 @@ database:
   user:  "{{ lookup('env', 'database_user') | default('database_user' , True) }}"
   password:  "{{ lookup('env', 'database_password') | default('database_password' , True) }}"
   host:  "{{ lookup('env', 'database_host') | default('database_host' , True) }}"
+  port: "{{ lookup('env', 'database_port') | default('database_port' , True) }}"
 user:
   name: "{{ lookup('env', 'user_name') | default('user_name' , True) }}"
   password: "{{ lookup('env', 'user_password') | default('user_password' , True) }}"
   email: "{{ lookup('env', 'user_email') | default('user_emial' , True) }}"
 wp_config: "/srv/local/config/wp-config.php"
+wp-url: "https://penguinzmedia.group"

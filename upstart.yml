@@ -6,7 +6,19 @@
   vars_files: vars/variables.yml
   tasks:
     - name: Install Wordpress Dependencies
-      include_tasks: jobs/install/install_dependencies.yml
+      include_tasks:
+        file: jobs/install/install_dependencies.yml
+
+    - name: Test Nginx
+      include_tasks:
+        file: jobs/tests/nginx_test.yml
+        tags:
+          - nginx
+          - tests
+        apply:
+          tags:
+          - nginx
+          - tests
 
     - name: Install Wordpress
       include_tasks: jobs/install/install_wordpress.yml

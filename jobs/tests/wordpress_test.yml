@@ -1,0 +1,7 @@
+---
+-  name: Check that Wordpress runs
+  uri:
+    url: "{{ wp-url }}"
+    return_content: yes
+  register: this
+  failed_when: "'AWESOME' not in this.content"

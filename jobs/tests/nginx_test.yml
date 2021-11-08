@@ -1,12 +1,4 @@
 ---
-- name: "Check if NGINX is installed"
-  package_facts:
-    manager: "auto"
-
-- name: confirm nginx is installed
-  assert:
-    that: "'nginx' in ansible_facts.packages"
-
 - name: Check if nginx is running
   command: ps aux | grep nginx
   register: nginx_status

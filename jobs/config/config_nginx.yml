@@ -1,7 +1,7 @@
 ---
 - name: Copy wpress.conf to /etc/nginx/conf.d/
   copy:
-    src: /srv/global/config/wordpress.conf
+    src: /srv/global/config/wp-config.conf
     dest: /etc/nginx/conf.d/
     mode: preserve
 

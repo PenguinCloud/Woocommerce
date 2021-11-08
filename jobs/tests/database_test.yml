@@ -1,8 +1,8 @@
 ---
 - name: Check database connectivity
-  command: echo X | telnet -e X "{{ database.host }}" 3306
+  command: "mysql -u {{ database.user }} -p {{ database.password }} -h {{ database.host }} -P  {{ database.port }}"
   register: database_connect
 
 - name: Assert that database is connected
   assert:
-    that: "'Connected' in database_connect.stdout"
+    that: "'Welcome to the MySQL monitor' in database_connect.stdout"
