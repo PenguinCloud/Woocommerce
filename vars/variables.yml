@@ -12,4 +12,4 @@ user:
   password: "{{ lookup('env', 'user_password') | default('user_password' , True) }}"
   email: "{{ lookup('env', 'user_email') | default('user_emial' , True) }}"
 wp_config: "/srv/local/config/wp-config.php"
-wp-url: "https://penguinzmedia.group"
+url: "{{ lookup('env', 'url') | default('https://penguinzmedia.group' , True) }}"

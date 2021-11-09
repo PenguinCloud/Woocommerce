@@ -13,7 +13,7 @@ services:
       - /opt
     restart: always
     healthcheck:
-      test: ["CMD", "ansible-playbook", "upstart.yml", "--tag", "tests"]
+      test: ["CMD", "ansible-playbook", "upstart.yml", "--tag", "test"]
       interval: 5m
       timeout: 10s
       retries: 3

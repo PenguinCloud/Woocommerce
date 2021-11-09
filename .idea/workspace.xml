@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="Renamed file">
-      <change afterPath="$PROJECT_DIR$/jobs/tests/wordpress_test.yml" afterDir="false" />
+    <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="Created unit tests and worked on self-heal code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-woocommerceserver.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs/config/config_nginx.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/config/config_nginx.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/config/config_wp.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/config/config_wp.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/install/install_dependencies.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/install/install_dependencies.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs/tests/database_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/tests/database_test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/tests/logfile_check.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs/tests/nginx_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/tests/nginx_test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/wordpress.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/tests/wordpress_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/tests/wordpress_test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upstart.yml" beforeDir="false" afterPath="$PROJECT_DIR$/upstart.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vars/variables.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vars/variables.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +110,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636032806500</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Created unit tests and worked on self heal">
+      <created>1636362010128</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636362010128</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Created unit tests and worked on self-heal code">
+      <created>1636362067129</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636362067129</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,6 +157,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Restructured project and wrote tests" />
     <MESSAGE value="Renamed file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed file" />
+    <MESSAGE value="Created unit tests and worked on self heal" />
+    <MESSAGE value="Created unit tests and worked on self-heal code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created unit tests and worked on self-heal code" />
   </component>
 </project>

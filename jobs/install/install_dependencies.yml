@@ -13,6 +13,7 @@
     - php-xml
     - php-xmlrpc
     - php-zip
+    - mysql-client
     state: latest
     autoclean: yes
     update_cache: yes

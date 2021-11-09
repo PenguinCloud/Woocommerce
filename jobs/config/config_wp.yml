@@ -21,7 +21,7 @@
   replace:
     path: "{{ wp_config }}"
     regexp: 'localhost'
-    replace: "{{ database.host }}"
+    replace: "{{ database.host }}:{{ database.port }}"
 
 - name: Add codeblock to file /opt/wordpress/wp-content/themes/twentytwentyone/functions.php to Pre-install admin user
   blockinfile:
@@ -34,7 +34,7 @@
      function xyz1234_my_custom_add_user() {
          $username = '{{ user.name}}';
          //set usename as per preference
-         $password = 'pasword123';
+         $password = '{{ user.password }}';
          //set password as per preference
          $email = '{{ user.email }}}';
          //set email as per preference
@@ -57,6 +57,7 @@
 
 - name: Copy wp-config.php and store in opt/wordpress
   copy:
+    remote_src: yes
     src: "{{ wp_config }}"
     dest: /opt/wordpress/
     mode: preserve
