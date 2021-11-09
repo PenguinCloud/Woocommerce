@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="Finished work">
+    <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="Was sorting out errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +18,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="alpha" />
+        <entry key="$PROJECT_DIR$" value="Beta" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,6 +43,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="alpha" />
+    </force-push-targets>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -128,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636445010464</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Was sorting out errors">
+      <created>1636445663843</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1636445663843</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Was sorting out errors">
+      <created>1636446610657</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1636446610657</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +184,7 @@
     <MESSAGE value="Created unit tests and worked on self-heal code" />
     <MESSAGE value="Worked on code fixed errors" />
     <MESSAGE value="Finished work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished work" />
+    <MESSAGE value="Was sorting out errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Was sorting out errors" />
   </component>
 </project>
