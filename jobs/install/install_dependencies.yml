@@ -4,6 +4,7 @@
     pkg:
     - nginx
     - php
+    - php-fpm
     - php-mysql
     - php-curl
     - php-gd
