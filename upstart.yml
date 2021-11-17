@@ -16,6 +16,18 @@
       - nginx
       - php
 
+    - name: Generate SSL certificate
+      include_tasks:
+        file: sslcertificate_generate.yml
+        apply:
+          tags:
+          - sslcertificate
+
+      tags:
+      - sslcertificate
+
+
+
     - name: Configure NGINX
       include_tasks:
         file: jobs/config/config_nginx.yml

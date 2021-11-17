@@ -1,0 +1,14 @@
+---
+- name: Generate an OpenSSL private key
+  openssl_privatekey:
+    path: "./certificates/{{ server_hostname }}_privkey.pem"
+     backup: yes
+
+- name: Generate an OpenSSL Certificate Signing Request with Subject information
+  openssl_csr:
+    path: "./certificates/{{ server_hostname }}.csr"
+    privatekey_path: "./certificates/{{ server_hostname }}_privkey.pem"
+    country_name: "{{ organisation.country }}"
+    organization_name: "{{ organization.name }}"
+    email_address: "{{ organisation.email }}"
+    common_name: "{{ organisation.hostname }}"
