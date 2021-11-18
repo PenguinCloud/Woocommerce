@@ -15,6 +15,7 @@
     - php-xmlrpc
     - php-zip
     - mysql-client
+    - python-openssl
     state: latest
     autoclean: yes
     update_cache: yes

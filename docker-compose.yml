@@ -1,6 +1,11 @@
 ---
 version: "2.4"
 services:
+  mariadb:
+    image: 'bitnami/mariadb:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+
   pmg-woocommerce-server:
     image: woocommerce
     build: .

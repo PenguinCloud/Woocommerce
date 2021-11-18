@@ -13,8 +13,8 @@ user:
   email: "{{ lookup('env', 'user_email') | default('admin@localhost' , True) }}"
 wp_config: "/srv/local/config/wp-config.php"
 url: "{{ lookup('env', 'url') | default('https://localhost' , True) }}"
-organisation:
+organization:
   name: "{{ lookup('env', 'organisation_name') | default('company' , True) }}"
-  country: "{{ lookup('env', 'organisation_country') | default('America' , True) }}"
+  country: "{{ lookup('env', 'organisation_country') | default('US' , True) }}"
   email: "{{ lookup('env', 'organisation_email') | default('admin@localhost' , True) }}"
   hostname: "{{ lookup('env', 'organisation_hostname') | default('localhost' , True) }}"

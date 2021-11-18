@@ -18,7 +18,7 @@
 
     - name: Generate SSL certificate
       include_tasks:
-        file: sslcertificate_generate.yml
+        file: jobs/config/sslcertificate_generate.yml
         apply:
           tags:
           - sslcertificate
