@@ -22,11 +22,8 @@
         apply:
           tags:
           - sslcertificate
-
       tags:
       - sslcertificate
-
-
 
     - name: Configure NGINX
       include_tasks:

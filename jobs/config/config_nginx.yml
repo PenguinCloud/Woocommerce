@@ -1,4 +1,10 @@
 ---
+- name: Replace host name in wp-config
+  replace:
+    path: nginx/wp-config.conf
+    regexp: "wppenguinz.com"
+    replace: "{{ organization.hostname }}"
+
 - name: Copy wpress.conf to /etc/nginx/conf.d/
   copy:
     remote_src: yes

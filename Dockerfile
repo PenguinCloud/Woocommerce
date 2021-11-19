@@ -17,7 +17,7 @@ ENV user_email="email"
 ENV organisation_name="name"
 ENV organisation_country="US"
 ENV organisation_email="email"
-ENV organisation_hostname="wppenguinz"
+ENV organisation_hostname="wppenguinz.org"
 ENV url="https://penguinzmedia.group"
 RUN ["ansible-playbook", "/opt/manager/upstart.yml"]
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
