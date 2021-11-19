@@ -12,3 +12,10 @@
     organization_name: "{{ organization.name }}"
     email_address: "{{ organization.email }}"
     common_name: "{{ organization.hostname }}"
+
+- name: Generate a Self Signed OpenSSL certificate
+  openssl_certificate:
+    path: "/etc/ssl/certs/{{ organization.hostname }}.pem"
+    privatekey_path: "/etc/ssl/private/{{ organization.hostname }}.pem"
+    csr_path: "/etc/ssl/certs/{{ organization.name }}.crt"
+    provider: selfsigned
