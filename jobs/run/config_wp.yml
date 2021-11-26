@@ -1,0 +1,63 @@
+---
+- name: Edit database name in wp-config file
+  replace:
+    path: "{{ wp_config }}"
+    regexp: 'database_name_here'
+    replace: "{{ database.name }}"
+
+- name: Edit database user name in wp-config
+  replace:
+    path: "{{ wp_config }}"
+    regexp: 'username_here'
+    replace: "{{ database.user }}"
+
+- name: Edit database password in wp-config
+  replace:
+    path: "{{ wp_config }}"
+    regexp: 'password_here'
+    replace: "{{ database.password }}"
+
+- name: Edit database host in wp-config
+  replace:
+    path: "{{ wp_config }}"
+    regexp: 'localhost'
+    replace: "{{ database.host }}:{{ database.port }}"
+
+- name: Add codeblock to file /opt/wordpress/wp-content/themes/twentytwentyone/functions.php to Pre-install admin user
+  blockinfile:
+    path: "{{ theme_function }}"
+    content: |
+     /*
+     * Create an admin user add programmatically
+     */
+     add_action('init', 'xyz1234_my_custom_add_user');
+     function xyz1234_my_custom_add_user() {
+         $username = '{{ user.name}}';
+         //set usename as per preference
+         $password = '{{ user.password }}';
+         //set password as per preference
+         $email = '{{ user.email }}}';
+         //set email as per preference
+         if (username_exists($username) == null && email_exists($email) == false) {
+             // Create the new user
+             $user_id = wp_create_user($username, $password, $email);
+             // Get current user object
+             $user = get_user_by('id', $user_id);
+             // Remove role
+             $user->remove_role('subscriber');
+             // Add role
+             $user->add_role('administrator');
+         }
+     }
+
+- name: Delete wp-sample-config.php
+  file:
+    path: /opt/wordpress/wp-config-sample.php
+    state: absent
+
+- name: Copy wp-config.php and store in opt/wordpress
+  copy:
+    remote_src: yes
+    src: "{{ wp_config }}"
+    dest: /opt/wordpress/
+    mode: preserve

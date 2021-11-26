@@ -1,0 +1,21 @@
+---
+- name: Replace host name in wp-config
+  replace:
+    path: /srv/global/config/wp-config.conf
+    regexp: 'wppenguinz'
+    replace: "{{ organization.hostname }}"
+
+- name: Copy wpress.conf to /etc/nginx/conf.d/
+  copy:
+    remote_src: yes
+    src: /srv/global/config/wp-config.conf
+    dest: /etc/nginx/conf.d/
+    mode: preserve
+
+- name: Remove default Nginx server blocks
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+
+
+
