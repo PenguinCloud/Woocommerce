@@ -4,11 +4,15 @@ services:
   mariadb:
     image: 'bitnami/mariadb:latest'
     environment:
-      - ALLOW_EMPTY_PASSWORD=yes
+      - ALLOW_EMPTY_PASSWORDS=yes
+      - MARIADB_ROOT_PASSWORD=p@ssword
+      - MARIADB_DATABASE=wordpress
+      - MARIADB_USER=wordpress
 
   pmg-woocommerce-server:
-    image: woocommerce
     build: .
+    environment:
+      - DATABASE_HOST=mariadb
     ports:
       - "80:80"
       - "443:443"
@@ -16,6 +20,8 @@ services:
       - /etc/nginx/conf.d
       - /var/log/nginx
       - /opt
+    depends_on:
+      - mariadb
     restart: always
     healthcheck:
       test: ["CMD", "ansible-playbook", "upstart.yml", "--tag", "test"]

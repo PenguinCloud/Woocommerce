@@ -1,5 +1,4 @@
 ---
 - name: Check database connectivity
-  shell: "mysql -u {{ database.user }} -p {{ database.password }} -h {{ database.host }} -P  {{ database.port }}"
-  changed_when: false
-  ignore_errors: yes ## Just for now
+  shell: "mysql -u {{ database.user }} -p{{ database.password }} -h {{ database.host }} -P {{ database.port }} {{ database.name }}"
+

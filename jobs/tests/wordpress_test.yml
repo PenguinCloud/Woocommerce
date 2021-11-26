@@ -3,4 +3,3 @@
   uri:
     url: "{{ url }}"
     status_code: [200, 202]
-  ignore_errors: yes ## Just for now

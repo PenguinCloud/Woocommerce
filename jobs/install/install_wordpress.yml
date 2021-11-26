@@ -1,6 +1,0 @@
----
-- name: Extract and download Wordpress
-  ansible.builtin.unarchive:
-    src: https://wordpress.org/latest.zip
-    dest: /opt/
-    remote_src: yes
