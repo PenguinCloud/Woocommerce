@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="">
+    <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="Was sorting out errors">
+      <change afterPath="$PROJECT_DIR$/jobs/exec/run_nginx.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/config/config_nginx.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/config/config_wp.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/config/sslcertificate_generate.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/install/install_dependencies.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/install/install_plugins.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/install/install_wordpress.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/tests/database_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/tests/database_test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/tests/nginx_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/tests/nginx_test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/tests/wordpress_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/tests/wordpress_test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/wp-config.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configs/wp-config.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upstart.sh" beforeDir="false" afterPath="$PROJECT_DIR$/upstart.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upstart.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/upstart.yml" beforeDir="false" afterPath="$PROJECT_DIR$/upstart.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/variables.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-config.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/wp-config.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

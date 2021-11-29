@@ -1,5 +1,5 @@
 ---
-- name: Install WooCommerce
+- name: Install woocommerce server
   hosts: localhost
   become: yes
   become_user: root
@@ -43,7 +43,7 @@
         - wordpress
         - build
 
-     - name: Install Plugins
+    - name: Install Plugins
       include_tasks:
         file: jobs/build/install_plugins.yml
         apply:
@@ -54,14 +54,27 @@
       - plugins
       - build
 
+    - name: Run nginx
+      include_tasks:
+        file: jobs/exec/run_nginx.yml
+        apply:
+          tags:
+          - nginx
+          - exec
+      tags:
+      - nginx
+      - exec
+
     - name: Configure NGINX
       include_tasks:
         file: jobs/config/config_nginx.yml # unsure if it is build or run
         apply:
           tags:
           - nginx
+          - run
       tags:
       - nginx
+      - run
 
     - name: Configure Wordpress
       include_tasks:
