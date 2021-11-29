@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="Was sorting out errors">
-      <change afterPath="$PROJECT_DIR$/jobs/exec/run_nginx.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upstart.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/exec/run_nginx.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/exec/run_nginx.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upstart.yml" beforeDir="false" afterPath="$PROJECT_DIR$/upstart.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636445663843</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Was sorting out errors">
+      <created>1638184321838</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1638184321838</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
