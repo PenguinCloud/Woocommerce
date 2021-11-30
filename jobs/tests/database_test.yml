@@ -2,3 +2,5 @@
 - name: Check database connectivity
   shell: "mysql -u {{ database.user }} -p{{ database.password }} -h {{ database.host }} -P {{ database.port }} {{ database.name }}"
 
+
+

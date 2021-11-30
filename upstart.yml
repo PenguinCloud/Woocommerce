@@ -1,9 +1,6 @@
 ---
 - name: Install woocommerce server
   hosts: localhost
-  become: yes
-  become_user: root
-  remote_user: root
   connection: local
   vars_files:
     - vars/prod.yml
@@ -19,17 +16,6 @@
       tags:
       - nginx
       - php
-      - build
-
-    - name: Generate SSL certificate
-      include_tasks:
-        file: jobs/build/sslcertificate_generate.yml
-        apply:
-          tags:
-          - sslcertificate
-          - build
-      tags:
-      - sslcertificate
       - build
 
     - name: Install Wordpress
@@ -54,16 +40,16 @@
       - plugins
       - build
 
-    - name: Run nginx
+    - name: Generate SSL certificate
       include_tasks:
-        file: jobs/exec/run_nginx.yml
+        file: jobs/run/sslcertificate_generate.yml
         apply:
           tags:
-          - nginx
-          - exec
+          - sslcertificate
+          - run
       tags:
-      - nginx
-      - exec
+      - sslcertificate
+      - run
 
     - name: Configure NGINX
       include_tasks:
@@ -87,13 +73,24 @@
       - wordpress_config
       - run
 
+    - name: Run nginx
+      include_tasks:
+        file: jobs/exec/run_nginx.yml
+        apply:
+          tags:
+          - nginx
+          - exec
+      tags:
+      - nginx
+      - exec
+
     - name: Test Nginx
       include_tasks:
         file: jobs/tests/nginx_test.yml
         apply:
           tags:
           - nginx
-          - tests
+          - test
           - run
       tags:
       - nginx

@@ -1,8 +1,14 @@
 ---
-- name: Replace host name in wp-config
+- name: Replace company name in wp-config ssl certificate and access log
   replace:
     path: /srv/global/config/wp-config.conf
     regexp: 'wppenguinz'
+    replace: "{{ organization.name }}"
+
+- name: Replace host name in wp-config
+  replace:
+    path: /srv/global/config/wp-config.conf
+    regexp: 'wppenguinz.local'
     replace: "{{ organization.hostname }}"
 
 - name: Copy wpress.conf to /etc/nginx/conf.d/

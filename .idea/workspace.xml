@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="Was sorting out errors">
+    <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="Was busy with nginx startup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/wp-config.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configs/wp-config.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hosts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/build/sslcertificate_generate.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/run/sslcertificate_generate.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs/exec/run_nginx.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/exec/run_nginx.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/run/config_nginx.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/run/config_nginx.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/tests/database_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/tests/database_test.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upstart.yml" beforeDir="false" afterPath="$PROJECT_DIR$/upstart.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +41,17 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/jobs/run/config_wp.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/run/sslcertificate_generate.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/build/install_dependencies.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/configs/wp-config.php" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/configs/wp-config.conf" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/exec/run_nginx.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/upstart.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/run/config_nginx.yml" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1ylitf7a9yUquD19Ir3dbqR0jR7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -48,6 +67,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/jobs/run" />
       <recent name="$PROJECT_DIR$/jobs/config" />
       <recent name="$PROJECT_DIR$/jobs" />
       <recent name="$PROJECT_DIR$/jobs/tests/install" />
@@ -144,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638184321838</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Was busy with nginx startup">
+      <created>1638186977988</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1638186977988</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,6 +209,7 @@
     <MESSAGE value="Worked on code fixed errors" />
     <MESSAGE value="Finished work" />
     <MESSAGE value="Was sorting out errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Was sorting out errors" />
+    <MESSAGE value="Was busy with nginx startup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Was busy with nginx startup" />
   </component>
 </project>

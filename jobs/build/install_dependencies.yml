@@ -16,6 +16,7 @@
     - php-zip
     - mysql-client
     - python-openssl
+    - python3-pexpect
     state: latest
     autoclean: yes
     update_cache: yes

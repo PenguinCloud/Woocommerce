@@ -4,10 +4,12 @@ services:
   mariadb:
     image: 'bitnami/mariadb:latest'
     environment:
+      - ALLOW_EMPTY_PASSWORD=yes
       - MARIADB_PASSWORD=p@ssword
-      - MARIADB_ROOT_PASSWORD=p@ssword
       - MARIADB_DATABASE=wordpress
       - MARIADB_USER=wordpress
+    ports:
+      - "3306:3306"
 
   woocommerce-server:
     build: .
