@@ -1,5 +1,9 @@
 ---
-plugins: "https://downloads.wordpress.org/plugin/download-now-for-woocommerce.zip"
+plugins:
+  - "https://downloads.wordpress.org/plugin/download-now-for-woocommerce.zip"
+  - "https://downloads.wordpress.org/plugin/redis-cache.2.0.22.zip"
+  - "https://downloads.wordpress.org/plugin/nginx-cache.1.0.5.zip"
+
 theme_function: "/opt/wordpress/wp-content/themes/twentytwentyone/functions.php"
 database:
   name: "{{ lookup('env', 'DATABASE_NAME') }}"
@@ -11,10 +15,11 @@ user:
   name: "{{ lookup('env', 'USER_NAME') }}"
   password: "{{ lookup('env', 'USER_PASSWORD') }}"
   email: "{{ lookup('env', 'USER_EMAIL') }}"
-wp_config: "/srv/local/config/wp-config.php"
 url: "{{ lookup('env', 'URL') }}"
 organization:
   name: "{{ lookup('env', 'ORGANIZATION_NAME') }}"
   country: "{{ lookup('env', 'ORGANIZATION_COUNTRY') }}"
   email: "{{ lookup('env', 'ORGANIZATION_EMAIL') }}"
   hostname: "{{ lookup('env', 'ORGANISATION_HOSTNAME') }}"
+cpu_count: "{{ lookup('env', 'CPU_COUNT') }}"
+file_limit: "{{ lookup('env', 'FILE_LIMIT') }}"

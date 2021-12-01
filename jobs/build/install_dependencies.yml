@@ -3,19 +3,24 @@
   apt:
     pkg:
     - nginx
-    - php
     - php-fpm
-    - php-mysql
-    - php-curl
-    - php-gd
-    - php-intl
-    - php-mbstring
-    - php-soap
+    - php-common
     - php-xml
     - php-xmlrpc
+    - php-curl
+    - php-gd
+    - php-imagick
+    - php-cli
+    - php-dev
+    - php-imap
+    - php-mbstring
+    - php-opcache
+    - php-redis
+    - php-soap
     - php-zip
     - mysql-client
     - python-openssl
+    - redis-server
     state: latest
     autoclean: yes
     update_cache: yes
