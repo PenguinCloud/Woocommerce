@@ -1,6 +1,7 @@
 ---
 - name: Install Plugins
   ansible.builtin.unarchive:
-    src: "{{ plugins }}"
+    src: "{{ item }}"
     dest: /opt/wordpress/wp-content/plugins
     remote_src: yes
+  with_items: "{{ plugins }}"

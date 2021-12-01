@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="Was sorting out the database connection and made some project changes">
+    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/fastcgi_params.j2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/nginx.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/woocommerce_dev.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml~Was sorting out errors" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/wp-config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/wp-config.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/tests/wordpress_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/tests/wordpress_test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/build/install_plugins.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/build/install_plugins.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/run/config_nginx.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/run/config_nginx.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/run/config_wp.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/run/config_wp.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upstart.yml" beforeDir="false" afterPath="$PROJECT_DIR$/upstart.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vars/prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vars/prod.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,17 +26,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="Beta" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -33,37 +36,20 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/jobs/run/config_wp.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/jobs/run/sslcertificate_generate.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dockerfile" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/jobs/build/install_dependencies.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/configs/wp-config.php" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/configs/wp-config.conf" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/jobs/exec/run_nginx.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/upstart.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/jobs/run/config_nginx.yml" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="ProjectId" id="1ylitf7a9yUquD19Ir3dbqR0jR7" />
+  <component name="ProjectId" id="21jPIVivSBnysN7cG3DMBYFOC4k" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/jobs/run" />
-      <recent name="$PROJECT_DIR$/jobs/config" />
-      <recent name="$PROJECT_DIR$/jobs" />
-      <recent name="$PROJECT_DIR$/jobs/tests/install" />
-      <recent name="$PROJECT_DIR$/nginx" />
+      <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -71,7 +57,7 @@
       <deployment type="dockerfile">
         <settings>
           <option name="containerName" value="" />
-          <option name="sourceFilePath" value="Dockerfile" />
+          <option name="sourceFilePath" value="" />
         </settings>
       </deployment>
       <method v="2" />
@@ -80,143 +66,28 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cc86fa69-e104-44d4-af5d-2c05b788dae1" name="Changes" comment="" />
-      <created>1632832799335</created>
+      <changelist id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="" />
+      <created>1638451469502</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1632832799335</updated>
+      <updated>1638451469502</updated>
     </task>
-    <task id="LOCAL-00001" summary="Initial commit">
-      <created>1634276282359</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1634276282359</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Restructured project and wrote tests">
-      <created>1636032269450</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1636032269450</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Restructured project and wrote tests">
-      <created>1636032558550</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1636032558550</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Renamed file">
-      <created>1636032806500</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1636032806500</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Created unit tests and worked on self heal">
-      <created>1636362010128</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1636362010128</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Created unit tests and worked on self-heal code">
-      <created>1636362067129</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1636362067129</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Worked on code fixed errors">
-      <created>1636444500141</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1636444500141</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Finished work">
-      <created>1636445010464</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1636445010464</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Was sorting out errors">
-      <created>1636445663843</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1636445663843</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Was sorting out errors">
-      <created>1638184321838</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1638184321838</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Was busy with nginx startup">
-      <created>1638186977988</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1638186977988</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Was sorting out the database connection and made some project changes">
-      <created>1638274870385</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1638274870385</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Was sorting out the database connection and made some project changes">
-      <created>1638274893350</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1638274893350</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.j2" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ini" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Push Woocommerce code" />
-    <MESSAGE value="Initial commit" />
-    <MESSAGE value="Restructured project and wrote tests" />
-    <MESSAGE value="Renamed file" />
-    <MESSAGE value="Created unit tests and worked on self heal" />
-    <MESSAGE value="Created unit tests and worked on self-heal code" />
-    <MESSAGE value="Worked on code fixed errors" />
-    <MESSAGE value="Finished work" />
-    <MESSAGE value="Was sorting out errors" />
-    <MESSAGE value="Was busy with nginx startup" />
-    <MESSAGE value="Was sorting out the database connection and made some project changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Was sorting out the database connection and made some project changes" />
   </component>
 </project>

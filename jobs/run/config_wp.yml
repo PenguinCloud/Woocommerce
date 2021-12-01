@@ -1,27 +1,13 @@
 ---
-- name: Edit database name in wp-config file
-  replace:
-    path: "{{ wp_config }}"
-    regexp: 'database_name_here'
-    replace: "{{ database.name }}"
+- name: Delete wp-sample-config.php
+  file:
+    path: /opt/wordpress/wp-config-sample.php
+    state: absent
 
-- name: Edit database user name in wp-config
-  replace:
-    path: "{{ wp_config }}"
-    regexp: 'username_here'
-    replace: "{{ database.user }}"
-
-- name: Edit database password in wp-config
-  replace:
-    path: "{{ wp_config }}"
-    regexp: 'password_here'
-    replace: "{{ database.password }}"
-
-- name: Edit database host in wp-config
-  replace:
-    path: "{{ wp_config }}"
-    regexp: 'localhost'
-    replace: "{{ database.host }}:{{ database.port }}"
+- name: Template nginx config file to /etc/nginx/nginx.conf
+  template:
+    src: templates/wp-config.j2
+    dest: /opt/wordpress/wp-config.php
 
 - name: Add codeblock to file /opt/wordpress/wp-content/themes/twentytwentyone/functions.php to Pre-install admin user
   blockinfile:
@@ -49,15 +35,3 @@
              $user->add_role('administrator');
          }
      }
-
-- name: Delete wp-sample-config.php
-  file:
-    path: /opt/wordpress/wp-config-sample.php
-    state: absent
-
-- name: Copy wp-config.php and store in opt/wordpress
-  copy:
-    remote_src: yes
-    src: "{{ wp_config }}"
-    dest: /opt/wordpress/
-    mode: preserve

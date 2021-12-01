@@ -1,27 +1,41 @@
 ---
-- name: Replace company name in wp-config ssl certificate and access log
-  replace:
-    path: /srv/global/config/wp-config.conf
-    regexp: 'wppenguinz'
-    replace: "{{ organization.name }}"
+- name: Create a directory for caching
+  file:
+    path: /home/wp_cache
+    state: directory
 
-- name: Replace host name in wp-config
-  replace:
-    path: /srv/global/config/wp-config.conf
-    regexp: 'wppenguinz.local'
-    replace: "{{ organization.hostname }}"
+- name: Delete file nginx.conf
+  file:
+    path: /etc/nginx/nginx.conf
+    state: absent
 
-- name: Copy wpress.conf to /etc/nginx/conf.d/
-  copy:
-    remote_src: yes
-    src: /srv/global/config/wp-config.conf
-    dest: /etc/nginx/conf.d/
-    mode: preserve
+- name: Template nginx config file to /etc/nginx/nginx.conf
+  template:
+    src: templates/nginx.j2
+    dest: /etc/nginx/nginx.conf
 
-- name: Remove default Nginx server blocks
+- name: Delete file fasstcgi_params
+  file:
+    path: /etc/nginx/fastcgi_params
+    state: absent
+
+- name: Template fastcgi_params file to etc/nginx/nginx.conf
+  template:
+    src: templates/fastcgi_params.j2
+    dest: /etc/nginx/fastcgi_params
+
+- name: Remove default file /etc/nginx/sites-available/default
+  file:
+    path: /etc/nginx/sites-available/default
+    state: absent
+
+- name: Remove default file /etc/nginx/sites-enabled/default
   file:
     path: /etc/nginx/sites-enabled/default
     state: absent
 
-
+- name: Template a file to /etc/nginx/sites-available
+  template:
+    src: templates/wp-site.j2
+    dest: /etc/nginx/sites-available/"{{ organization.hostname }}"
 
