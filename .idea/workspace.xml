@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Working on configuring nginx and security measures">
-      <change afterPath="$PROJECT_DIR$/templates/fastcgi_params.j2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/nginx.j2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/wp-config.j2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/wp-site.j2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/woocommerce_dev.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml~Was sorting out errors" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/wp-config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/wp-config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/build/install_plugins.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/build/install_plugins.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/run/config_nginx.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/run/config_nginx.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/run/config_wp.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/run/config_wp.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upstart.yml" beforeDir="false" afterPath="$PROJECT_DIR$/upstart.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vars/prod.yml" afterDir="false" />
-    </list>
+    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Working on configuring nginx and security measures" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +17,17 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/templates/wp-config.j2" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/fastcgi_params.j2" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vars/prod.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/upstart.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/run/config_nginx.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/wp-site.j2" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/nginx.j2" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dockerfile" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/jobs/run/config_wp.yml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21jPIVivSBnysN7cG3DMBYFOC4k" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -81,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638792512195</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Working on configuring nginx and security measures">
+      <created>1638792740996</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638792740996</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
