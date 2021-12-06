@@ -53,7 +53,7 @@
 
     - name: Configure NGINX
       include_tasks:
-        file: jobs/run/config_nginx.yml # unsure if it is build or run
+        file: jobs/run/config_nginx.yml
         apply:
           tags:
           - nginx

@@ -5,21 +5,27 @@ plugins:
   - "https://downloads.wordpress.org/plugin/nginx-cache.1.0.5.zip"
 
 theme_function: "/opt/wordpress/wp-content/themes/twentytwentyone/functions.php"
+
 database:
   name: "{{ lookup('env', 'DATABASE_NAME') }}"
   user: "{{ lookup('env', 'DATABASE_USER') }}"
   password: "{{ lookup('env', 'DATABASE_PASSWORD') }}"
   host: "{{ lookup('env', 'DATABASE_HOST') }}"
   port: "{{ lookup('env', 'DATABASE_PORT') }}"
+
 user:
   name: "{{ lookup('env', 'USER_NAME') }}"
   password: "{{ lookup('env', 'USER_PASSWORD') }}"
   email: "{{ lookup('env', 'USER_EMAIL') }}"
+
 url: "{{ lookup('env', 'URL') }}"
+
 organization:
   name: "{{ lookup('env', 'ORGANIZATION_NAME') }}"
   country: "{{ lookup('env', 'ORGANIZATION_COUNTRY') }}"
   email: "{{ lookup('env', 'ORGANIZATION_EMAIL') }}"
   hostname: "{{ lookup('env', 'ORGANISATION_HOSTNAME') }}"
+
 cpu_count: "{{ lookup('env', 'CPU_COUNT') }}"
+
 file_limit: "{{ lookup('env', 'FILE_LIMIT') }}"

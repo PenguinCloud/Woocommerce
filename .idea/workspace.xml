@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Merge remote-tracking branch 'origin/alpha' into alpha&#10;&#10;# Conflicts:&#10;#&#9;.idea/woocommerce.iml&#10;#&#9;.idea/workspace.xml">
+    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Fixed spacing">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/tests/wordpress_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/tests/wordpress_test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/wp-config.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wp-config.j2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/wp-site.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wp-site.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upstart.yml" beforeDir="false" afterPath="$PROJECT_DIR$/upstart.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vars/prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vars/prod.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,15 +27,19 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/jobs/build/install_wordpress.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/upstart.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/wp-site.j2" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/tests/wordpress_test.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/run/config_wp.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/wp-config.j2" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/run/sslcertificate_generate.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/fastcgi_params.j2" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/vars/prod.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/upstart.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/jobs/run/config_nginx.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/templates/wp-site.j2" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/exec/run_nginx.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/nginx.j2" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dockerfile" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/jobs/run/config_wp.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dockerfile" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21jPIVivSBnysN7cG3DMBYFOC4k" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -88,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638792944827</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed spacing">
+      <created>1638793818803</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638793818803</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -110,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Working on configuring nginx and security measures" />
     <MESSAGE value="Merge remote-tracking branch 'origin/alpha' into alpha&#10;&#10;# Conflicts:&#10;#&#9;.idea/woocommerce.iml&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/alpha' into alpha&#10;&#10;# Conflicts:&#10;#&#9;.idea/woocommerce.iml&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="Fixed spacing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed spacing" />
   </component>
 </project>
