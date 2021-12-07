@@ -4,7 +4,7 @@
     path: /opt/wordpress/wp-config-sample.php
     state: absent
 
-- name: Template nginx config file to /etc/nginx/nginx.conf
+- name: Template nginx config file to /opt/wordpress/wp-config.php
   template:
     src: templates/wp-config.j2
     dest: /opt/wordpress/wp-config.php
