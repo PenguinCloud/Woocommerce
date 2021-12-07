@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Added network to docker-compose.yml">
-      <change afterPath="$PROJECT_DIR$/templates/wp_site2.j2" afterDir="false" />
+    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Fixed file name and paths to file">
+      <change afterPath="$PROJECT_DIR$/templates/wp_site.j2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/exec/run_nginx.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/exec/run_nginx.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs/run/config_nginx.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/run/config_nginx.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nginx.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nginx.j2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/wp-site.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wp-site.j2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vars/prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/wp-config.j2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/wp-site.j2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/wp_site2.j2" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,33 +26,34 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/jobs/run/config_wp.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/jobs/run/sslcertificate_generate.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/exec/run_nginx.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/run/config_nginx.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/jobs/build/install_wordpress.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/upstart.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/jobs/tests/wordpress_test.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/vars/prod.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/templates/fastcgi_params.j2" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/templates/wp-config.j2" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/jobs/run/config_wp.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/jobs/exec/run_nginx.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/templates/wp-site.j2" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dockerfile" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/jobs/run/config_nginx.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/nginx.j2" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/fastcgi_params.j2" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="21jPIVivSBnysN7cG3DMBYFOC4k" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nextcloud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -119,7 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638806561639</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed errors with config file">
+      <created>1638871326752</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1638871326752</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed file name and paths to file">
+      <created>1638871552073</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1638871552073</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -138,10 +149,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Working on configuring nginx and security measures" />
     <MESSAGE value="Merge remote-tracking branch 'origin/alpha' into alpha&#10;&#10;# Conflicts:&#10;#&#9;.idea/woocommerce.iml&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Fixed spacing" />
     <MESSAGE value="Added network to docker-compose.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added network to docker-compose.yml" />
+    <MESSAGE value="Fixed errors with config file" />
+    <MESSAGE value="Fixed file name and paths to file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed file name and paths to file" />
   </component>
 </project>
