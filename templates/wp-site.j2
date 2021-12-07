@@ -1,67 +1,70 @@
-fastcgi_cache_path /home/wp_cache/cache levels=1:2 keys_zone={{ organization.hostname }}:100m inactive=60m;
+# WordPress single site rules.
+# Designed to be included in any server {} block.
+# Upstream to abstract backend connection(s) for php
+upstream php {
+        server unix:/tmp/php-cgi.socket;
+        server 127.0.0.1:9000;
+}
 
 server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
+        ## Your website name goes here.
+        server_name {{ organization.hostname }};
+        ## Your only path reference.
+        root /opt/wordpress;
+        ## This should be in your http block and if it is, it's not needed here.
+        index index.php;
 
-    server_name {{ organization.hostname }};
+        location = /favicon.ico {
+                access_log /var/log/nginx/access.log;
+                error_log /var/log/nginx/error.log;
+        }
 
-    ssl_certificate /etc/ssl/certs/{{ organization.name }}.pem;
-    ssl_certificate_key /etc/ssl/private/{{ organization.name }}.pem;
+        location = /robots.txt {
+                allow all;
+                access_log /var/log/nginx/access.log;
+                error_log /var/log/nginx/error.log;
+        }
 
-    access_log /var/log/nginx/access.log;
-    error_log /var/log/nginx/error.log;
+        location / {
+                # This is cool because no php is touched for static content.
+                # include the "?$args" part so non-default permalinks doesn't break when using query string
+                try_files $uri $uri/ /index.php?$args;
+        }
 
-    root /opt/wordpress;
-    index index.php;
-
-    set $skip_cache 0;
-
-    # POST requests and urls with a query string should always go to PHP
-    if ($request_method = POST) {
-        set $skip_cache 1;
-    }
-    if ($query_string != "") {
-        set $skip_cache 1;
-    }
-
-    # Don’t cache uris containing the following segments
-    if ($request_uri ~* "/wp-admin/|/xmlrpc.php|wp-.*.php|/feed/|index.php|sitemap(_index)?.xml") {
-        set $skip_cache 1;
-    }
-
-    # Don’t use the cache for logged in users or recent commenters
-    if ($http_cookie ~* "comment_author|wordpress_[a-f0-9]+|wp-postpass|wordpress_no_cache|wordpress_logged_in") {
-        set $skip_cache 1;
-    }
-
-    location / {
-        try_files $uri $uri/ /index.php?$args;
-    }
-
-    location ~ \.php$ {
+        location ~ \.php$ {
         try_files $uri =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
         fastcgi_pass unix:/run/php/php7.4-fpm.sock;
         fastcgi_index index.php;
         include fastcgi_params;
-        fastcgi_cache_bypass $skip_cache;
-        fastcgi_no_cache $skip_cache;
-        fastcgi_cache {{ organization.hostname }};
-        fastcgi_cache_valid 60m;
-    }
+        }
 
-    if ($request_uri ~* "/(cart|checkout|my-account)/*$") {
-    set $skip_cache 1;
-}
-
+        location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+                expires max;
+                log_not_found off;
+        }
 }
 
 server {
-    listen 80;
-    listen [::]:80;
+    # listens both on IPv4 and IPv6 on 443 and enables HTTPS and HTTP/2 support.
+    # HTTP/2 is available in nginx 1.9.5 and above.
+    listen *:443 ssl http2;
+    listen [::]:443 ssl http2;
 
-    server_name {{ organization.hostname }};
+    # indicate locations of SSL key files.
+    ssl_certificate /etc/ssl/certs/{{ organization.name }}.pem;
+    ssl_certificate_key /etc/ssl/private/{{ organization.name }}.pem;
 
-    return 301 https://{{ organization.hostname }}$request_uri;
+    # indicate the server name
+    server_name {{ organization.hostname }} *.{{ organization.hostname }};
+
+    # Enable HSTS. This forces SSL on clients that respect it, most modern browsers. The includeSubDomains flag is optional.
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
+
+    # Set caches, protocols, and accepted ciphers. This config will merit an A+ SSL Labs score as of Sept 2015.
+    ssl_session_cache shared:SSL:20m;
+    ssl_session_timeout 10m;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers 'ECDH+AESGCM:ECDH+AES256:ECDH+AES128:DH+3DES:!ADH:!AECDH:!MD5';
 }

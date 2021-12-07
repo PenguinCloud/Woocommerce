@@ -1,8 +1,6 @@
 ---
 plugins:
   - "https://downloads.wordpress.org/plugin/download-now-for-woocommerce.zip"
-  - "https://downloads.wordpress.org/plugin/redis-cache.2.0.22.zip"
-  - "https://downloads.wordpress.org/plugin/nginx-cache.1.0.5.zip"
 
 theme_function: "/opt/wordpress/wp-content/themes/twentytwentyone/functions.php"
 
