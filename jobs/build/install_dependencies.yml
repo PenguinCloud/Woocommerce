@@ -3,6 +3,7 @@
   apt:
     pkg:
     - nginx
+    - php
     - php-fpm
     - php-common
     - php-xml
@@ -20,7 +21,6 @@
     - php-zip
     - mysql-client
     - python-openssl
-    - redis-server
     state: latest
     autoclean: yes
     update_cache: yes

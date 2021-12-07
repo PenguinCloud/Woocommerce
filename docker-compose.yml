@@ -17,13 +17,11 @@ services:
     build: .
     environment:
       - DATABASE_HOST=mariadb
+      - URL=https://127.0.0.1
     ports:
       - "80:80"
       - "443:443"
-    volumes:
-      - /etc/nginx/conf.d
-      - /var/log/nginx
-      - /opt
+      - "9000:9000"
     depends_on:
       - mariadb
     networks:

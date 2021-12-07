@@ -36,6 +36,13 @@
 
 - name: Template a file to /etc/nginx/sites-available
   template:
-    src: templates/wp-site.j2
-    dest: /etc/nginx/sites-available/"{{ organization.hostname }}"
+    src: templates/wp_site2.j2
+    dest: /etc/nginx/sites-enabled/"{{ organization.hostname }}"
+
+- name: Template a file to etc/nginx/sites-enabled
+  template:
+    src: templates/wp_site2.j2
+    dest: /etc/nginx/sites-enabled/"{{ organization.hostname }}"
+
+
 
