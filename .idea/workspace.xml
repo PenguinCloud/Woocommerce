@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Added file I accidentally deleted physically">
+      <change afterPath="$PROJECT_DIR$/jobs/exec/nginx.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/config/config_nginx.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/exec/run_nginx.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/run/nginx.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/wp-config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upstart.yml" beforeDir="false" afterPath="$PROJECT_DIR$/upstart.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,19 +28,18 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/jobs/run/config_wp.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/jobs/run/sslcertificate_generate.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/jobs/tests/database_test.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/run/config_nginx.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jobs/tests/nginx_test.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/jobs/build/install_wordpress.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/upstart.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/jobs/tests/wordpress_test.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/vars/prod.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/templates/fastcgi_params.j2" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/jobs/run/config_wp.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/jobs/exec/run_nginx.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dockerfile" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/jobs/run/config_nginx.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/jobs/tests/nginx_test.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/nginx.j2" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/fastcgi_params.j2" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,7 +56,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nextcloud" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
