@@ -75,26 +75,13 @@
 
     - name: Run nginx
       include_tasks:
-        file: jobs/exec/run_nginx.yml
+        file: jobs/run/nginx.yml
         apply:
           tags:
           - nginx
-          - exec
-      tags:
-      - nginx
-      - exec
-
-    - name: Test Nginx
-      include_tasks:
-        file: jobs/tests/nginx_test.yml
-        apply:
-          tags:
-          - nginx
-          - test
           - run
       tags:
       - nginx
-      - test
       - run
 
     - name: Test database connectivity
@@ -107,6 +94,19 @@
           - run
       tags:
       - database
+      - test
+      - run
+
+    - name: Test Nginx
+      include_tasks:
+        file: jobs/tests/nginx_test.yml
+        apply:
+          tags:
+          - nginx
+          - test
+          - run
+      tags:
+      - nginx
       - test
       - run
 
@@ -123,7 +123,14 @@
       - test
       - run
 
-
+    - name: Execute NGINX
+      include_tasks:
+        file: jobs/exec/nginx.yml
+        apply:
+          tags:
+            - exec
+      tags:
+        - exec
 
 
 
