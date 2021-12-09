@@ -12,17 +12,16 @@
     - php-gd
     - php-imagick
     - php-cli
-    - php-dev
+    - php-dev2
     - php-imap
     - php-mbstring
     - php-opcache
     - php-redis
     - php-soap
     - php-zip
-    - mysql-client
+    - mysql-client-8.0
     - python-openssl
     state: latest
-    autoclean: yes
     update_cache: yes
 
 
