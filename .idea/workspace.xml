@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Updated  to use new penguintech image">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Replaced package mysql-client with mysql-client-8.0 mysql-client is phased out by  ubuntu">
       <change beforePath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639022857388</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Replaced package mysql-client with mysql-client-8.0 mysql-client is phased out by  ubuntu">
+      <created>1639025347554</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1639025347554</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -184,6 +190,7 @@
     <MESSAGE value="Added file I accidentally deleted physically" />
     <MESSAGE value="Updated nginx to be interactive" />
     <MESSAGE value="Updated  to use new penguintech image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated  to use new penguintech image" />
+    <MESSAGE value="Replaced package mysql-client with mysql-client-8.0 mysql-client is phased out by  ubuntu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replaced package mysql-client with mysql-client-8.0 mysql-client is phased out by  ubuntu" />
   </component>
 </project>

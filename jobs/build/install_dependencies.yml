@@ -12,7 +12,7 @@
     - php-gd
     - php-imagick
     - php-cli
-    - php-dev2
+    - php-dev
     - php-imap
     - php-mbstring
     - php-opcache
