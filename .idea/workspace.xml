@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Added file I accidentally deleted physically">
-      <change afterPath="$PROJECT_DIR$/jobs/exec/nginx.yml" afterDir="false" />
+    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Updated nginx to be interactive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/config/config_nginx.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/exec/run_nginx.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/run/nginx.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/wp-config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upstart.yml" beforeDir="false" afterPath="$PROJECT_DIR$/upstart.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +49,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nextcloud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -147,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638882044512</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated nginx to be interactive">
+      <created>1638963698126</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1638963698126</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -174,6 +174,7 @@
     <MESSAGE value="Fixed errors with config file" />
     <MESSAGE value="Fixed file name and paths to file" />
     <MESSAGE value="Added file I accidentally deleted physically" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added file I accidentally deleted physically" />
+    <MESSAGE value="Updated nginx to be interactive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated nginx to be interactive" />
   </component>
 </project>
