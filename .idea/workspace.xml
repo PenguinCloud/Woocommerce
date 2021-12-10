@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Replaced package mysql-client with mysql-client-8.0 mysql-client is phased out by  ubuntu">
+    <list default="true" id="383bd043-6822-418c-9e88-dc295e0a2cca" name="Changes" comment="Fixed a typo php-dev 2 to php-dev">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/build/install_dependencies.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +50,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nextcloud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -161,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639025347554</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed a typo php-dev 2 to php-dev">
+      <created>1639025905221</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1639025905221</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -191,6 +199,7 @@
     <MESSAGE value="Updated nginx to be interactive" />
     <MESSAGE value="Updated  to use new penguintech image" />
     <MESSAGE value="Replaced package mysql-client with mysql-client-8.0 mysql-client is phased out by  ubuntu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replaced package mysql-client with mysql-client-8.0 mysql-client is phased out by  ubuntu" />
+    <MESSAGE value="Fixed a typo php-dev 2 to php-dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a typo php-dev 2 to php-dev" />
   </component>
 </project>

@@ -19,7 +19,6 @@
     - php-redis
     - php-soap
     - php-zip
-    - mysql-client-8.0
     - python-openssl
     state: latest
     update_cache: yes
