@@ -1,0 +1,12 @@
+---
+- name: Install Wordpress Dependencies
+  include_tasks:
+    file: jobs/build/install_dependencies.yml
+
+- name: Install Wordpress
+  include_tasks:
+    file: jobs/build/install_wordpress.yml
+
+- name: Install Plugins
+  include_tasks:
+    file: jobs/build/install_plugins.yml
