@@ -1,6 +1,6 @@
 ---
 - name: Extract and download Wordpress
   ansible.builtin.unarchive:
-    src: https://wordpress.org/latest.zip
+    src: "{{ app_link }}"
     dest: /opt/
     remote_src: yes

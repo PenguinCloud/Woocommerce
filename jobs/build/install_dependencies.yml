@@ -19,10 +19,9 @@
     - php-redis
     - php-soap
     - php-zip
-    - mysql-client
     - python-openssl
+    - python3-pymysql
     state: latest
-    autoclean: yes
     update_cache: yes
 
 

@@ -9,6 +9,7 @@
     src: templates/wp-config.j2
     dest: /opt/wordpress/wp-config.php
 
+# Leaving this so the code can be inserted in any theme file
 - name: Add codeblock to file /opt/wordpress/wp-content/themes/twentytwentyone/functions.php to Pre-install admin user
   blockinfile:
     path: "{{ theme_function }}"

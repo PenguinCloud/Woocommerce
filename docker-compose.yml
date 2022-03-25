@@ -26,7 +26,6 @@ services:
       - mariadb
     networks:
       - wordpress
-    restart: always
     healthcheck:
       test: ["CMD", "ansible-playbook", "upstart.yml", "--tag", "test"]
       interval: 5m
