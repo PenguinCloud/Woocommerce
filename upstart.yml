@@ -1,60 +1,140 @@
 ---
-- hosts: localhost
+- name: Install woocommerce server
+  hosts: localhost
   connection: local
   vars_files:
-    - vars/base.yml
-  become: yes
-  become_user: root
-  remote_user: root
+    - vars/prod.yml
   tasks:
-    - name: Include nodeType variables
-      include_vars:
-        file: "vars/{{ BUILD_ENVIRONMENT }}.yml"
-      tags:
-        - always
-      ignore_errors: yes
-    - name: Include Special Variables
-      include_vars:
-        file: "vars/{{ lookup('env', 'COMPUTE_ENV') | default( 'base', True) }}.yml"
-      ignore_errors: yes
-    - name: Build And Install
+    - name: Install Wordpress Dependencies
       include_tasks:
-        file: jobs/build/build.yml
+        file: jobs/build/install_dependencies.yml
         apply:
           tags:
-            - build
+          - nginx
+          - php
+          - build
       tags:
+      - nginx
+      - php
+      - build
+
+    - name: Install Wordpress
+      include_tasks:
+        file: jobs/build/install_wordpress.yml
+        apply:
+          tags:
+          - wordpress
+          - build
+      tags:
+        - wordpress
         - build
-    - name: Run Configuration and Live
+
+    - name: Install Plugins
       include_tasks:
-        file: jobs/run/run.yml
+        file: jobs/build/install_plugins.yml
         apply:
           tags:
-            - run
+          - plugins
+          - build
       tags:
-        - run
-    - name: Run tests to make sure build and run applied application correctly
+      - plugins
+      - build
+
+    - name: Generate SSL certificate
       include_tasks:
-        file: jobs/tests/test.yml
+        file: jobs/run/sslcertificate_generate.yml
         apply:
           tags:
-            - run
-            - test
+          - sslcertificate
+          - run
       tags:
-        - run
-        - test
-    - name: Execute application
+      - sslcertificate
+      - run
+
+    - name: Configure NGINX
       include_tasks:
-        file: jobs/exec/exec.yml
+        file: jobs/run/config_nginx.yml
+        apply:
+          tags:
+          - nginx
+          - run
+      tags:
+      - nginx
+      - run
+
+    - name: Configure Wordpress
+      include_tasks:
+        file: jobs/run/config_wp.yml
+        apply:
+          tags:
+          - wordpress_config
+          - run
+      tags:
+      - wordpress_config
+      - run
+
+    - name: Run nginx
+      include_tasks:
+        file: jobs/run/nginx.yml
+        apply:
+          tags:
+          - nginx
+          - run
+      tags:
+      - nginx
+      - run
+
+    - name: Test database connectivity
+      include_tasks:
+        file: jobs/tests/database_test.yml
+        apply:
+          tags:
+          - database
+          - test
+          - run
+      tags:
+      - database
+      - test
+      - run
+
+    - name: Test Nginx
+      include_tasks:
+        file: jobs/tests/nginx_test.yml
+        apply:
+          tags:
+          - nginx
+          - test
+          - run
+      tags:
+      - nginx
+      - test
+      - run
+
+    - name: Test URL
+      include_tasks:
+        file: jobs/tests/wordpress_test.yml
+        apply:
+          tags:
+          - url
+          - test
+          - run
+      tags:
+      - url
+      - test
+      - run
+
+    - name: Execute NGINX
+      include_tasks:
+        file: jobs/exec/nginx.yml
         apply:
           tags:
             - exec
       tags:
         - exec
-#    This section is not needed because we enable nginx daemon
-#    - name: Run tests to make sure app is running as expected
-#      include_tasks:
-#        file: jobs/run/test.yml
-#      tags:
-#        - exec
-#        - test
+
+
+
+
+
+
+
