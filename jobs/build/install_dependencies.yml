@@ -20,7 +20,6 @@
     - php-soap
     - php-zip
     - python-openssl
-    - python3-pymysql
     state: latest
     update_cache: yes
 
