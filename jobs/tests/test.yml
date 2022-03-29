@@ -8,5 +8,5 @@
 
 - name: Test URL
   include_tasks:
-    file: jobs/tests/wordpress_test.yml
+    file: jobs/tests/url_test.yml
 
