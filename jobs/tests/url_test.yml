@@ -1,5 +1,5 @@
 ---
-- name: Check that Wordpress runs
+- name: Url test
   uri:
     url: "{{ url }}"
     status_code: [200, 202]
