@@ -1,5 +1,5 @@
 FROM penguintech/core-ansible
-LABEL maintainer="Penguinz Tech Group LLC"
+LABEL maintainer="Penguin Tech Group LLC"
 COPY . /opt/manager/
 ENV DATABASE_NAME="wordpress"
 ENV DATABASE_USER="wordpress"
@@ -16,6 +16,7 @@ ENV ORGANISATION_HOSTNAME="ptg.org"
 ENV URL="https://127.0.0.1"
 ENV CPU_COUNT="2"
 ENV FILE_LIMIT="1042"
+ARG APP_LINK="https://wordpress.org/latest.zip"
 RUN ansible-playbook /opt/manager/upstart.yml -c local --tags build
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
