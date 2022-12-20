@@ -1,7 +1,7 @@
 ---
-- name: Recursively change ownership of akaunting directory
+- name: Recursively change ownership of wordpress directory
   ansible.builtin.file:
-    path: /opt/akaunting
+    path: /opt/wordpress
     state: directory
     recurse: yes
     owner: "{{ run.user }}"
@@ -23,4 +23,11 @@
     owner: "{{ run.user }}"
     group: "{{ run.user }}"
 
+- name: Recursively change ownership for /run
+  ansible.builtin.file:
+    path: /run
+    state: directory
+    recurse: yes
+    owner: "{{ run.user }}"
+    group: "{{ run.user }}"
 

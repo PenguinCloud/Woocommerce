@@ -3,14 +3,21 @@
 #  include_tasks:
 #    file: jobs/run/sslcertificate_generate.yml
 #
-#- name: Configure NGINX
-#  include_tasks:
-#    file: jobs/run/config_nginx.yml
-#
-#- name: Configure Wordpress
-#  include_tasks:
-#    file: jobs/run/config_wp.yml
-#
-#- name: Run nginx
-#  include_tasks:
-#    file: jobs/run/nginx.yml
+- name: Configure php-fpm
+  include_tasks:
+    file: php_config.yml
+
+- name: Configure NGINX
+  include_tasks:
+    file: config_nginx.yml
+
+- name: Configure Wordpress
+  include_tasks:
+    file: config_wp.yml
+
+# I want the databse test to run here before we start nginx and php fpm
+- name: Test database
+  include_tasks:
+    file: jobs/tests/database_test.yml
+
+

@@ -20,11 +20,11 @@ ARG WOOCOMMERCE_LINK="https://downloads.wordpress.org/plugin/download-now-for-wo
 RUN ansible-playbook build.yml -c local
 
 # PUT YER ENVS in here
-#ENV DATABASE_NAME="wordpress"
-#ENV DATABASE_USER="wordpress"
-#ENV DATABASE_PASSWORD="p@ssword"
-#ENV DATABASE_HOST="localhost"
-#ENV DATABASE_PORT="3306"
+ENV DATABASE_NAME="wordpress"
+ENV DATABASE_USER="wordpress"
+ENV DATABASE_PASSWORD="p@ssword"
+ENV DATABASE_HOST="localhost"
+ENV DATABASE_PORT="3306"
 #ENV USER_NAME="admin"
 #ENV USER_PASSWORD="p@ssword"
 #ENV USER_EMAIL="admin@localhost"
@@ -33,12 +33,11 @@ RUN ansible-playbook build.yml -c local
 #ENV ORGANIZATION_EMAIL="admin@localhost"
 #ENV ORGANISATION_HOSTNAME="ptg.org"
 #ENV URL="https://127.0.0.1"
-#ENV CPU_COUNT="2"
-#ENV FILE_LIMIT="1042"
-#ENV SSL_KEY="nokey"
-#ENV SSL_CERTIFICATE="nocert"
-
-EXPOSE 8080
+ENV CPU_COUNT="2"
+ENV FILE_LIMIT="1042"
+ENV HTTP_PORT="8080"
+ENV SSL_KEY="nokey"
+ENV SSL_CERTIFICATE="nocert"
 
 # Switch to non-root user
 USER ptg-user

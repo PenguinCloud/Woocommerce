@@ -8,9 +8,3 @@
   template:
     src: templates/wp-config.j2
     dest: /opt/wordpress/wp-config.php
-
-- name: Template file to /opt/wordpress/wp-content/themes/twentytwentytwo/functions.php
-  template:
-    src: templates/theme_file.j2
-    dest: /opt/wordpress/wp-content/themes/twentytwentytwo/functions.php
-    force: yes
