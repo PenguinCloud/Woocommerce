@@ -1,15 +1,15 @@
 ---
 - name: Install Wordpress Dependencies
   include_tasks:
-    file: jobs/build/install_dependencies.yml
+    file: install_dependencies.yml
 
 - name: Install Wordpress
   include_tasks:
-    file: jobs/build/install_wordpress.yml
+    file: install_wordpress.yml
 
 - name: Install Woocommerce
   include_tasks:
-    file: jobs/build/install_woocommerce.yml
+    file: install_woocommerce.yml
 
 - name: Set permissions for php-fpm
   include_tasks:
@@ -18,3 +18,7 @@
 - name: Set permissions
   include_tasks:
     file: permissions_nginx.yml
+
+- name: Create open ssl certificate repo's
+  include_tasks:
+    file: create_cert_directories.yml

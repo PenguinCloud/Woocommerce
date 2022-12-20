@@ -10,8 +10,6 @@ app:
 woocommerce:
   link: "{{ lookup('ansible.builtin.env', 'WOOCOMMERCE_LINK') }}"
 
-theme_function: "/opt/wordpress/wp-content/themes/twentytwentyone/functions.php"
-
 database:
   name: "{{ lookup('env', 'DATABASE_NAME') }}"
   user: "{{ lookup('env', 'DATABASE_USER') }}"
@@ -19,12 +17,7 @@ database:
   host: "{{ lookup('env', 'DATABASE_HOST') }}"
   port: "{{ lookup('env', 'DATABASE_PORT') }}"
 
-user:
-  name: "{{ lookup('env', 'USER_NAME') }}"
-  password: "{{ lookup('env', 'USER_PASSWORD') }}"
-  email: "{{ lookup('env', 'USER_EMAIL') }}"
-
-url: "{{ lookup('env', 'URL') }}"
+server_address: "{{ lookup('env', 'SERVER_ADDRESS') }}"
 
 organization:
   name: "{{ lookup('env', 'ORGANIZATION_NAME') }}"
@@ -36,9 +29,6 @@ cpu_count: "{{ lookup('env', 'CPU_COUNT') }}"
 
 file_limit: "{{ lookup('env', 'FILE_LIMIT') }}"
 
-
-ssl_key: "{{ lookup('env', 'SSL_KEY') }}"
-ssl_cert: "{{ lookup('env', 'SSL_CERTIFICATE') }}"
-
 ports:
   http: "{{ lookup('env', 'HTTP_PORT') }}"
+  https: "{{ lookup('env', 'HTTPS_PORT') }}"

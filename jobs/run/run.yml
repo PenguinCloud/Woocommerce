@@ -1,8 +1,8 @@
 ---
-#- name: Generate SSL certificate
-#  include_tasks:
-#    file: jobs/run/sslcertificate_generate.yml
-#
+- name: Generate SSL certificate
+  include_tasks:
+    file: jobs/run/sslcertificate_generate.yml
+
 - name: Configure php-fpm
   include_tasks:
     file: php_config.yml
