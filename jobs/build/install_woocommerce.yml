@@ -1,0 +1,15 @@
+---
+- name: Downlaod Woocommerce
+  ansible.builtin.get_url:
+    url: "{{ woocommerce.link }}"
+    dest: /opt/wordpress/wp-content/plugins
+
+- name: Extract Wordpress zip file
+  ansible.builtin.unarchive:
+    src: /opt/wordpress/wp-content/plugins/download-now-for-woocommerce.zip
+    dest: /opt/wordpress/wp-content/plugins
+
+- name: Delete the zip file
+  file:
+    path: /opt/wordpress/wp-content/plugins/download-now-for-woocommerce.zip
+    state: absent

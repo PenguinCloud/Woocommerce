@@ -7,6 +7,14 @@
   include_tasks:
     file: jobs/build/install_wordpress.yml
 
-- name: Install Plugins
+- name: Install Woocommerce
   include_tasks:
-    file: jobs/build/install_plugins.yml
+    file: jobs/build/install_woocommerce.yml
+
+- name: Set permissions for php-fpm
+  include_tasks:
+    file: permissions_phpfpm.yml
+
+- name: Set permissions
+  include_tasks:
+    file: permissions_nginx.yml

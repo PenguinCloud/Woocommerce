@@ -1,6 +1,14 @@
 ---
-plugins:
-  - "https://downloads.wordpress.org/plugin/download-now-for-woocommerce.zip"
+run:
+  user: ptg-user
+
+app:
+  title: "{{ lookup('ansible.builtin.env', 'APP_TILE') }}"
+  link: "{{ lookup('ansible.builtin.env', 'APP_LINK') }}"
+  version: "{{ lookup('ansible.builtin.env', 'APP_VERSION') }}"
+
+woocommerce:
+  link: "{{ lookup('ansible.builtin.env', 'WOOCOMMERCE_LINK') }}"
 
 theme_function: "/opt/wordpress/wp-content/themes/twentytwentyone/functions.php"
 
@@ -28,7 +36,6 @@ cpu_count: "{{ lookup('env', 'CPU_COUNT') }}"
 
 file_limit: "{{ lookup('env', 'FILE_LIMIT') }}"
 
-app_link: "{{ lookup('env', 'APP_LINK') }}"
 
 ssl_key: "{{ lookup('env', 'SSL_KEY') }}"
 ssl_cert: "{{ lookup('env', 'SSL_CERTIFICATE') }}"
