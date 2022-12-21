@@ -1,4 +1,3 @@
-
 FROM code-dal1.penguintech.group:5050/ptg/standards/docker-ansible-image:stable
 LABEL company="Penguin Tech Group LLC"
 LABEL org.opencontainers.image.authors="info@penguintech.group"
@@ -23,7 +22,7 @@ RUN ansible-playbook build.yml -c local
 ENV DATABASE_NAME="wordpress"
 ENV DATABASE_USER="wordpress"
 ENV DATABASE_PASSWORD="p@ssword"
-ENV DATABASE_HOST="localhost"
+ENV DATABASE_HOST="mariadb"
 ENV DATABASE_PORT="3306"
 ENV USER_NAME="admin"
 ENV USER_PASSWORD="p@ssword"
@@ -36,6 +35,9 @@ ENV CPU_COUNT="2"
 ENV FILE_LIMIT="1042"
 ENV HTTP_PORT="8080"
 ENV HTTPS_PORT="8443"
+ENV SSL_CERT="open"
+ENV PROTOCOL="https"
+
 # Switch to non-root user
 USER ptg-user
 

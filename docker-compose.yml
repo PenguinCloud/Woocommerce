@@ -16,9 +16,6 @@ services:
   woocommerce-server:
     image: penguintech/woocommerce
     build: .
-    environment:
-      - DATABASE_HOST=mariadb
-      - URL=https://127.0.0.1
     ports:
       - "8080:8080"
       - "8443:8443"
