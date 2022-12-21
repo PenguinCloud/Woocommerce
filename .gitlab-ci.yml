@@ -3,9 +3,9 @@ variables:
   RELEASE_VERSION: v0.1.0
 
 include:
-  - template: Code-Quality.gitlab-ci.yml
-  - template: Security/SAST.gitlab-ci.yml
-  #- template: Jobs/Secret-Detection.gitlab-ci.yml
+  - template: Code-Quality..gitlab-ci.yml
+  - template: Security/SAST..gitlab-ci.yml
+  #- template: Jobs/Secret-Detection..gitlab-ci.yml
 
 variables:
   SCAN_KUBERNETES_MANIFESTS: "false"
@@ -49,7 +49,7 @@ basic-code-check:
     - shfmt -mn -l -w entrypoint.sh
   script:
     - shellcheck *.sh  | tee  /tmp/$CI_COMMIT_SHA/reports/shellcheck-lint-report.txt
-    - ansible-lint . --exclude .gitlab-ci.yml -x expirimental --profile basic -f codeclimate | tee /tmp/$CI_COMMIT_SHA/reports/ansible-lint-report.json
+    - ansible-lint . --exclude ..gitlab-ci.yml -x expirimental --profile basic -f codeclimate | tee /tmp/$CI_COMMIT_SHA/reports/ansible-lint-report.json
   artifacts:
     reports:
       cyclonedx:
@@ -66,7 +66,7 @@ prod-code-check:
     - shfmt -i 2 -ci -mn  -d  entrypoint.sh
   script:
     - shellcheck *.sh  | tee  /tmp/$CI_COMMIT_SHA/reports/shellcheck-lint-report.txt
-    - ansible-lint . --exclude .gitlab-ci.yml -x expirimental --profile safety -f codeclimate | tee /tmp/$CI_COMMIT_SHA/reports/ansible-lint-report.json
+    - ansible-lint . --exclude ..gitlab-ci.yml -x expirimental --profile safety -f codeclimate | tee /tmp/$CI_COMMIT_SHA/reports/ansible-lint-report.json
 
 alpha2beta:
   stage: build
