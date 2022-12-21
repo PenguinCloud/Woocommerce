@@ -33,7 +33,7 @@ ports:
   http: "{{ lookup('env', 'HTTP_PORT') }}"
   https: "{{ lookup('env', 'HTTPS_PORT') }}"
 
-ssl_cert: "{{ lookup('env', 'SSL_CERT') }}"
+ssl_cert: "{{ lookup('env', ''SSL_CERT) }}"
 
 protocol: "{{ lookup('env', 'PROTOCOL') }}"
 
