@@ -1,48 +1,21 @@
 ---
-- name: Create a directory for caching
-  file:
-    path: /home/wp_cache
-    state: directory
-
-- name: Delete file nginx.conf
-  file:
-    path: /etc/nginx/nginx.conf
-    state: absent
-
-- name: Template nginx config file to /etc/nginx/nginx.conf
+- name: Configure nginx .conf
   template:
-    src: templates/nginx.j2
+    src: /opt/manager/templates/nginx.j2
     dest: /etc/nginx/nginx.conf
+    force: yes
 
-- name: Delete file fasstcgi_params
-  file:
-    path: /etc/nginx/fastcgi_params
-    state: absent
-
-- name: Template fastcgi_params file to etc/nginx/nginx.conf
+- name: Configure nginx http webserver
   template:
-    src: templates/fastcgi_params.j2
-    dest: /etc/nginx/fastcgi_params
+    src: /opt/manager/templates/wpsite_http.j2
+    dest: /etc/nginx/conf.d/wpsite_http.conf
+    force: yes
+  when: protocol == "http"
 
-- name: Remove default file /etc/nginx/sites-available/default
-  file:
-    path: /etc/nginx/sites-available/default
-    state: absent
-
-- name: Remove default file /etc/nginx/sites-enabled/default
-  file:
-    path: /etc/nginx/sites-enabled/default
-    state: absent
-
-- name: Template a file to /etc/nginx/sites-available
+- name: Configure nginx https webserver
   template:
-    src: templates/wpsite.j2
-    dest: /etc/nginx/sites-enabled/"{{ organization.hostname }}"
-
-- name: Template a file to etc/nginx/sites-enabled
-  template:
-    src: templates/wpsite.j2
-    dest: /etc/nginx/sites-enabled/"{{ organization.hostname }}"
-
-
+    src: /opt/manager/templates/wpsite_https.j2
+    dest: /etc/nginx/conf.d/wpsite_https.conf
+    force: yes
+  when: protocol == "https"
 

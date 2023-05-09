@@ -14,14 +14,11 @@ services:
       - wordpress
 
   woocommerce-server:
+    image: penguintech/woocommerce
     build: .
-    environment:
-      - DATABASE_HOST=mariadb
-      - URL=https://127.0.0.1
     ports:
-      - "80:80"
-      - "443:443"
-      - "9000:9000"
+      - "8080:8080"
+      - "8443:8443"
     depends_on:
       - mariadb
     networks:

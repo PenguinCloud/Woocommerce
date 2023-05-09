@@ -1,8 +1,14 @@
 ---
-plugins:
-  - "https://downloads.wordpress.org/plugin/download-now-for-woocommerce.zip"
+run:
+  user: ptg-user
 
-theme_function: "/opt/wordpress/wp-content/themes/twentytwentyone/functions.php"
+app:
+  title: "{{ lookup('ansible.builtin.env', 'APP_TILE') }}"
+  link: "{{ lookup('ansible.builtin.env', 'APP_LINK') }}"
+  version: "{{ lookup('ansible.builtin.env', 'APP_VERSION') }}"
+
+woocommerce:
+  link: "{{ lookup('ansible.builtin.env', 'WOOCOMMERCE_LINK') }}"
 
 database:
   name: "{{ lookup('env', 'DATABASE_NAME') }}"
@@ -11,12 +17,7 @@ database:
   host: "{{ lookup('env', 'DATABASE_HOST') }}"
   port: "{{ lookup('env', 'DATABASE_PORT') }}"
 
-user:
-  name: "{{ lookup('env', 'USER_NAME') }}"
-  password: "{{ lookup('env', 'USER_PASSWORD') }}"
-  email: "{{ lookup('env', 'USER_EMAIL') }}"
-
-url: "{{ lookup('env', 'URL') }}"
+server_address: "{{ lookup('env', 'SERVER_ADDRESS') }}"
 
 organization:
   name: "{{ lookup('env', 'ORGANIZATION_NAME') }}"
@@ -28,11 +29,14 @@ cpu_count: "{{ lookup('env', 'CPU_COUNT') }}"
 
 file_limit: "{{ lookup('env', 'FILE_LIMIT') }}"
 
-app_link: "{{ lookup('env', 'APP_LINK') }}"
-
-ssl_key: "{{ lookup('env', 'SSL_KEY') }}"
-ssl_cert: "{{ lookup('env', 'SSL_CERTIFICATE') }}"
-
 ports:
-  - 80
-  - 443
+  http: "{{ lookup('env', 'HTTP_PORT') }}"
+  https: "{{ lookup('env', 'HTTPS_PORT') }}"
+
+ssl_cert: "{{ lookup('env', 'SSL_CERT') }}"
+
+protocol: "{{ lookup('env', 'PROTOCOL') }}"
+
+ports_test:
+  - 8080
+  - 8443
